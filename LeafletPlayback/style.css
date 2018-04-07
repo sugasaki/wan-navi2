@@ -38,11 +38,11 @@ h1 {
 
 #datetime { 
     font-size: 50px;
-    opacity: 0.3;
-    font-family: 'arial black';
+    opacity: 0.2;
+    font-weight: 800;
     position: absolute;
-    left: 100px;
-    top: 10px;
+    left: 50px;
+    top: 30px;
 }
 
 
