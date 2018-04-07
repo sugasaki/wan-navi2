@@ -86,6 +86,11 @@ timeline.on('timechange', onCustomTimeChange);
 // A callback so timeline is set after changing playback time
 function onPlaybackTimeChange (ms) {
     timeline.setCustomTime(new Date(ms));
+
+    var day = moment(ms);
+    var st = day.format('YYYY/MM/DD HH:mm:ss ');
+    $('#datetime').html( st );
+    //console.debug(st);
 };
 
 // 

@@ -34,3 +34,16 @@ h1 {
     margin: 0;
     font-size: 16px;
 }
+
+
+#datetime { 
+    font-size: 50px;
+    opacity: 0.3;
+    font-family: 'arial black';
+    position: absolute;
+    left: 100px;
+    top: 10px;
+}
+
+
+
