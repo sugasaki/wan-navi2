@@ -1,7 +1,9 @@
 $(function() {
+
+
     // Get start/end times
-    var startTime = new Date(demoTracks[0].properties.time[0]);
-    var endTime = new Date(demoTracks[0].properties.time[demoTracks[0].properties.time.length - 1]);
+    var startTime = new Date(demoTracks.properties.time[0]);
+    var endTime = new Date(demoTracks.properties.time[demoTracks.properties.time.length - 1]);
 
     // Create a DataSet with data
     var timelineData = new vis.DataSet([{ start: startTime, end: endTime, content: 'Demo GPS Tracks' }]);
@@ -78,7 +80,7 @@ $(function() {
     var playback = new L.Playback(map, null, onPlaybackTimeChange, playbackOptions);
     
     playback.setData(demoTracks);    
-    playback.addData(blueMountain);
+    //playback.addData(blueMountain);
 
     // Uncomment to test data reset;
     //playback.setData(blueMountain);    

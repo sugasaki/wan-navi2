@@ -5,7 +5,8 @@ $(function() {
     var basemapLayer = new L.TileLayer('http://{s}.tiles.mapbox.com/v3/github.map-xgq2svrz/{z}/{x}/{y}.png');
 
     // Center map and default zoom level
-    map.setView([44.61131534, -123.4726739], 9);
+    map.setView([32.760886, 129.865541], 14);
+
 
     // Adds the background layer to the map
     map.addLayer(basemapLayer);
@@ -26,7 +27,7 @@ $(function() {
         ];
         
     function _assignColor() {
-        return _colors[_colorIdx++%10];
+        return _colors[_colorIdx++%20];
     }
     
     // =====================================================

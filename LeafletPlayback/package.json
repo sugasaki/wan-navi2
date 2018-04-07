@@ -3,6 +3,7 @@
     "private": true,
     "version": "0.0.0",
     "devDependencies": {
-        "leaflet-pulse-icon": "0.1.0"
+        "leaflet-pulse-icon": "0.1.0",
+        "moment":"2.22.0"
     }
 }

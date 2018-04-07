@@ -212,5 +212,33 @@ L.Playback.Control = L.Control.extend({
     return new Date(yr, mo, dy, hr, min, sec).getTime();    
   },
 
+  _loadTracksFromFile: function(file) {
+    var self = this;
+    var reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = function(e) {
+      var fileStr = e.target.result;
+
+      /**
+       * See if we can do GeoJSON...
+       */
+      try {
+        var tracks = JSON.parse(fileStr);
+      } catch (e) {
+        /**
+         * See if we can do GPX...
+         */
+        try {
+          var tracks = L.Playback.Util.ParseGPX(fileStr);
+        } catch (e) {
+          console.error('Unable to load tracks!');
+          return;
+        }
+      }
+
+      self.playback.addData(tracks);
+      $('#load-tracks-modal').modal('hide');
+    };    
+  }
 
 });
