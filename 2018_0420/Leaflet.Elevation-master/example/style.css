@@ -1,10 +1,21 @@
-#map {
+
+
+html, body, #map {
+    height:100%;
+    width:100%;
+    padding:0px;
+    margin:0px;
+ }
+ 
+ 
+ 
+ #map {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 120px;
 }
+
 
 #title_container {
     z-index: 10000;
@@ -19,7 +30,6 @@
     right: 0;
     bottom: 0;
 }
-
 
 body {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -46,14 +56,5 @@ h1 {
     top: 30px;
 }
 
-
-#uid { 
-    font-size: 20px;
-    opacity: 0.2;
-    font-weight: 800;
-    position: absolute;
-    left: 50px;
-    bottom: 130px;
-}
 
 

@@ -91,7 +91,15 @@ function _refresh(){
 
 
 function _fetch(){
-    var url = 'https://wan-navi.azurewebsites.net/api/LeafletPlayback';
+
+    var userid = location.hash;
+    userid = userid.substr(1); //"3456"
+    $('#uid').html( userid );
+
+    var url = 'https://wan-navi.azurewebsites.net/api/LeafletPlayback/' + userid;
+    //var url = 'http://localhost:5000/api/LeafletPlayback/' + userid;
+    
+
     fetch(url, {
         method: "GET", 
     })
