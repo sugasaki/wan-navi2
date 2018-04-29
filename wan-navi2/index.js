@@ -109,6 +109,8 @@ function _fetch(){
 
         // Initialize playback
         playback = new L.Playback(map, responseJson, onPlaybackTimeChange, playbackOptions);
+        playback._map.fitBounds(playback._tracksLayer.layer.getBounds());
+
     });
 };
 
