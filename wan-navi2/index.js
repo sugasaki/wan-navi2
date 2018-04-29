@@ -21,8 +21,8 @@ map.setView([32.760886, 129.865541], 13);
 
 
 var moveIcon = L.icon({
-    iconUrl: 'images/sugapon3.png',
-    shadowUrl: 'images/marker-shadow.png',
+    //iconUrl: 'images/sugapon3.png',
+    //shadowUrl: 'images/marker-shadow.png',
 
     iconSize: [25, 41],
     shadowSize: [41, 41],
@@ -41,7 +41,7 @@ var playbackOptions = {
     tracksLayer: true,
     marker: function(){
         return {
-            icon:  moveIcon 
+            //icon:  moveIcon 
         };
     }      
 };
