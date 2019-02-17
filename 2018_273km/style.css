@@ -1,49 +1,47 @@
 #map {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 120px;
 }
 
 #title_container {
-    z-index: 10000;
-    position: absolute;
-    left: 100px;
-}    
+  z-index: 10000;
+  position: absolute;
+  left: 100px;
+}
 
-#timeline { 
-    height: 120px; 
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+#timeline {
+  height: 120px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 body {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 h1 {
-    font-size: 36px;
-    font-weight: 300;
-    line-height: 1.1;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.1;
 }
 
 .datetimeControl p {
-    margin: 0;
-    font-size: 16px;
+  margin: 0;
+  font-size: 16px;
 }
 
-
-#datetime { 
-    font-size: 50px;
-    opacity: 0.2;
-    font-weight: 800;
-    position: absolute;
-    left: 50px;
-    top: 30px;
+#datetime {
+  z-index: 10000;
+  color: #000000;
+  font-size: 50px;
+  opacity: 0.2;
+  font-weight: 800;
+  position: absolute;
+  left: 50px;
+  top: 30px;
 }
-
-
-

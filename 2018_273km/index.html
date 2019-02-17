@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset=utf-8 />
+  <head>
+    <meta charset="utf-8" />
     <title>金龍メモリー 2017 秋の273㎞</title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
 
-    
-    <link href="//cdnjs.cloudflare.com/ajax/libs/vis/3.12.0/vis.min.css" rel="stylesheet" type="text/css" /> 
+    <link
+      href="//cdnjs.cloudflare.com/ajax/libs/vis/3.12.0/vis.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+    />
     <link href="style.css?2018040612000" rel="stylesheet" type="text/css" />
+  </head>
 
-</head>
-
-<body>
-    <div id='map'></div>
+  <body>
+    <div id="map"></div>
     <div id="datetime"></div>
     <div id="timeline"></div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.js"></script>
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/locale/ja.js'></script> -->
 
-</body>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.js'></script>
-    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/locale/ja.js'></script> -->
+  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
 
+  <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js"></script>
+  <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js"></script>
 
-    <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
-    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
-    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js'></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/vis/3.12.0/vis.min.js"></script>
 
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.0/leaflet.awesome-markers.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/vis/3.12.0/vis.min.js"></script>  
-    
-    
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.0/leaflet.awesome-markers.js"></script>
+  <script src="./LeafletPlayback/dist/LeafletPlayback.min.js"></script>
+  <script src="./data/demo-tracks.js"></script>
+  <script src="./index.js?2018040612000"></script>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-117139141-1"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-    <script src="./LeafletPlayback/dist/LeafletPlayback.min.js"></script>
-    <script src="./data/demo-tracks.js"></script>
-    <script src="./index.js?2018040612000"></script>
-
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117139141-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-117139141-1');
-</script>
-
+    gtag("config", "UA-117139141-1");
+  </script>
 </html>

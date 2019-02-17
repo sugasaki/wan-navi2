@@ -35,8 +35,9 @@
 
     
     el.addTo(map);
-    var g=new L.GPX("./20180420222613.gpx", {
-        async: true,
+    //var g=new L.GPX("./20180420222613.gpx", {
+    var g=new L.GPX("./20180414035801.gpx", {
+            async: true,
             marker_options: {
             startIconUrl: './lib/leaflet-gpx/pin-icon-start.png',
             endIconUrl: './lib/leaflet-gpx/pin-icon-end.png',
