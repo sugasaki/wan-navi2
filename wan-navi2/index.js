@@ -90,7 +90,7 @@ function _fetch() {
   userid = userid.substr(1); //"3456"
   $("#uid").html(userid);
 
-  var url = "https://wan-navi.azurewebsites.net/api/LeafletPlayback/" + userid;
+  var url = "http://wan-navi.azurewebsites.net/api/LeafletPlayback/" + userid;
   //var url = 'http://localhost:5000/api/LeafletPlayback/' + userid;
 
   console.log("url", url);
@@ -101,7 +101,14 @@ function _fetch() {
     .then(response => response.json())
     .then(responseJson => {
       console.log("responseJson", responseJson);
+      console.log("responseJson", responseJson.properties);
+      if (responseJson.properties.time.length == 0) {
+        console.log("item zero");
+        return;
+      }
+
       inittimelinn(responseJson);
+
       // Initialize playback
       playback = new L.Playback(
         map,
@@ -109,6 +116,7 @@ function _fetch() {
         onPlaybackTimeChange,
         playbackOptions
       );
+
       playback._map.fitBounds(playback._tracksLayer.layer.getBounds());
       refreshNow(responseJson);
     });
@@ -182,6 +190,8 @@ function inittimelinn(demoTracks) {
     timelineData,
     timelineOptions
   );
+
+  console.log("timelineData", timelineData);
 
   // Set custom time marker (blue)
   //timeline.setCustomTime(startTime);
